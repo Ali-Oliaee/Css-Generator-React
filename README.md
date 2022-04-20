@@ -59,7 +59,7 @@ Clone the project
 
 ```bash
 
-git clone https://github.com/mohammadyousefvand/Css-Generator.git
+git clone https://github.com/mohammadyousefvand/Css-Generator-React.git
 
 ```
 
@@ -67,7 +67,7 @@ Go to the project directory
 
 ```bash
 
-cd Css-Generator
+cd Css-Generator-React
 
 ```
 
