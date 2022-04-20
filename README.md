@@ -1,4 +1,4 @@
-# Css Generator
+# Css Generator 😃
 
 Packages used in Project :
 - React Router Dom
@@ -8,8 +8,10 @@ Packages used in Project :
 - react-awesome-button
 
 # Preview
+![Screenshot from 2022-04-20 19-32-06](https://user-images.githubusercontent.com/91375726/164261696-fa262df0-e712-48ea-8d04-daccd9141cfc.png)
 
-# Tools
+
+# Tools 🔨
 
  **Background tools :** 
 - Background-color
