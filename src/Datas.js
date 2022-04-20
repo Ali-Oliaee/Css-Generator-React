@@ -1,5 +1,5 @@
-let Datas = {
-    background: {
+let Datas = [
+    {
         title: "Background",
         routeAddress: [
             {
@@ -12,8 +12,8 @@ let Datas = {
             },
         ],
     },
-    filter: {
-        title: "Background",
+    {
+        title: "Box",
         routeAddress: [
             {
                 route: '/border',
@@ -27,10 +27,14 @@ let Datas = {
                 route :'/box/boxshadow',
                 name: 'Box-Shadow'
             },
+            {
+                route :'/box/opasity',
+                name: 'Opasity'
+            },
         ],
     },
-    box: {
-        title: "Background",
+    {
+        title: "Filter",
         routeAddress: [
             {
                 route: '/filter/blur',
@@ -41,8 +45,8 @@ let Datas = {
                 name: 'Sepia'
             },
             {
-                route :'/filter/brigness',
-                name: 'Brigness'
+                route :'/filter/brightness',
+                name: 'Brightness'
             },
             {
                 route :'/filter/contrast',
@@ -70,6 +74,23 @@ let Datas = {
             },
         ],
     },
-}
+    {
+        title: "Text",
+        routeAddress: [
+            {
+                route: '/text/fontsize',
+                name: 'Font-size'
+            },
+            {
+                route: '/text/color',
+                name: 'Text-color'
+            },
+            {
+                route: '/text/decoration',
+                name: 'Text-decoration'
+            },
+        ],
+    },
+]
 
 export default Datas

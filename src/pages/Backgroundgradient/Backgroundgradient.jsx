@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import './../generalStyle.css'
 import copyed from '../../func'
 import { MainContext } from '../../components/Context/MainContextProvider'
+import { motion } from 'framer-motion'
 
 export default function Backgroundgradient() {
   const [gradientColorOne, setGradientColorOne] = useState('#000')
@@ -10,7 +11,7 @@ export default function Backgroundgradient() {
   const [gradientRateTwo, setGradientRateTwo] = useState('100%')
   const [gradientType, setGradientType] = useState('linear-gradient')
   const [gradientAngel, setGradientAngel] = useState('90deg,')
-  const { copyClickText, btnCopyTextChange } = useContext(MainContext)
+  const { copyClickText, btnCopyTextChange, mainVariant } = useContext(MainContext)
 
   const gradientColorOneChange = (e) => {
     setGradientColorOne(e.target.value)
@@ -49,7 +50,12 @@ export default function Backgroundgradient() {
   }
 
   return (
-    <div className='style_Container'>
+    <motion.div
+      variants={mainVariant}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className='style_Container'>
       <span className='titr'>Background-color</span>
       <div className="top_box">
         <div className="preview_wraper">
@@ -119,6 +125,6 @@ export default function Backgroundgradient() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }

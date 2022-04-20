@@ -14,7 +14,7 @@ export default function Header() {
 
     return (
         <header className='header'>
-            <Link to={'/'} className='logo'><span style={{ color: 'rgba(197, 18, 205, 1)', fontSize: 30 }}>Css</span> Generator</Link>
+            <Link to={'/'} className='logo'><span style={{ color: 'rgba(197, 18, 205, 1)' }}>Css</span> Generator</Link>
             <div className='icon_box_Header'>
                 <div onClick={openMenu}>
                     {!menuActive ? (

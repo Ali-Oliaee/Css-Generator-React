@@ -2,11 +2,12 @@ import React, { useContext, useState } from 'react'
 import { MainContext } from '../../components/Context/MainContextProvider'
 import './../generalStyle.css'
 import './Filter.css'
+import { motion } from 'framer-motion'
 import copyed from '../../func'
 
 export default function HeuRotate() {
   const [heuRotate, setHeuRotate] = useState('50deg')
-  const { copyClickText, btnCopyTextChange } = useContext(MainContext)
+  const { copyClickText, btnCopyTextChange, mainVariant } = useContext(MainContext)
 
   const heuRotateHandler = (e) => {
     setHeuRotate(`${e.target.value}deg`)
@@ -18,7 +19,12 @@ export default function HeuRotate() {
     btnCopyTextChange()
   }
   return (
-    <div className='style_Container'>
+    <motion.div
+      variants={mainVariant}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className='style_Container'>
       <span className='titr'>Heu-Rotate</span>
       <div className="top_box">
         <div className="preview_wraper">
@@ -53,6 +59,6 @@ export default function HeuRotate() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }

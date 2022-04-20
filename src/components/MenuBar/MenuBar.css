@@ -46,3 +46,7 @@
 .btn_Menu:hover {
     color: rgba(197, 18, 205, 1);
 }
+
+.actived{
+    color: rgba(197, 18, 205, 1);
+}

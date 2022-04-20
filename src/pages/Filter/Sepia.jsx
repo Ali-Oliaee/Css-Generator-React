@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react'
 import { MainContext } from '../../components/Context/MainContextProvider'
 import './../generalStyle.css'
+import { motion } from 'framer-motion'
 import './Filter.css'
 import copyed from '../../func'
 
 export default function Sepia() {
   const [sepia, setSepia] = useState('10%')
-  const { copyClickText, btnCopyTextChange } = useContext(MainContext)
+  const { copyClickText, btnCopyTextChange, mainVariant } = useContext(MainContext)
 
   const sepiaHandler = (e) => {
     setSepia(`${e.target.value}%`)
@@ -18,7 +19,12 @@ export default function Sepia() {
     btnCopyTextChange()
   }
   return (
-    <div className='style_Container'>
+    <motion.div
+      variants={mainVariant}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className='style_Container'>
       <span className='titr'>Sepia</span>
       <div className="top_box">
         <div className="preview_wraper">
@@ -53,6 +59,6 @@ export default function Sepia() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }

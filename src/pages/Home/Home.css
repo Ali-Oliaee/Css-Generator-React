@@ -29,15 +29,6 @@
     gap: 20px;
 }
 
-.btn_link {
-    width: 240px;
-    background: linear-gradient(222deg, rgba(94, 1, 152, 1) 0%, rgba(197, 18, 205, 1) 100%);
-    color: #eee;
-    padding: 15px 10px;
-    border-radius: 5px;
-    text-align: center;
-}
-
 @media screen and (max-width: 850px) {
 
     .group_container {

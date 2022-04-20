@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { MainContext } from '../../components/Context/MainContextProvider'
 import './../generalStyle.css'
+import { motion } from 'framer-motion'
 import copyed from '../../func'
 
 export default function BoxShadow() {
@@ -10,7 +11,7 @@ export default function BoxShadow() {
     const [boxVertical, setBoxVertical] = useState('10px')
     const [boxSpread, setBoxSpread] = useState('10px')
     const [boxInset, setBoxInset] = useState('')
-    const { copyClickText, btnCopyTextChange } = useContext(MainContext)
+    const { copyClickText, btnCopyTextChange, mainVariant } = useContext(MainContext)
 
     const boxColorChange = (e) => {
         setBoxShadowColor(e.target.value)
@@ -42,7 +43,12 @@ export default function BoxShadow() {
         btnCopyTextChange()
     }
     return (
-        <div className='style_Container'>
+        <motion.div
+            variants={mainVariant}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className='style_Container'>
             <span className='titr'>Box-Shadow</span>
             <div className="top_box">
                 <div className="preview_wraper">
@@ -112,6 +118,6 @@ export default function BoxShadow() {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }

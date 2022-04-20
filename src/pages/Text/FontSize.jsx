@@ -1,20 +1,19 @@
 import React, { useContext, useState } from 'react'
 import { MainContext } from '../../components/Context/MainContextProvider'
 import './../generalStyle.css'
-import './Filter.css'
 import { motion } from 'framer-motion'
 import copyed from '../../func'
 
-export default function Blur() {
-    const [blur, setBlur] = useState('10px')
+export default function FontSize() {
+    const [fontsize, setFontsize] = useState('50px')
     const { copyClickText, btnCopyTextChange, mainVariant } = useContext(MainContext)
 
-    const blurHandler = (e) => {
-        setBlur(`${e.target.value}px`)
+    const fontsizeHandler = (e) => {
+        setFontsize(`${e.target.value}px`)
     }
 
-    const blurCopyHandler = async () => {
-        let text = `filter: blur(${blur});`
+    const fontsizeCopyHandler = async () => {
+        let text = `font-size: ${fontsize};`
         await copyed(text)
         btnCopyTextChange()
     }
@@ -25,26 +24,25 @@ export default function Blur() {
             animate="visible"
             exit="exit"
             className='style_Container'>
-            <span className='titr'>Blur</span>
+            <span className='titr'>Font-size</span>
             <div className="top_box">
                 <div className="preview_wraper">
                     <span>Preview</span>
-                    <div style={{ filter: `blur(${blur})` }} className='preview_box filter_preview'></div>
+                    <div className='preview_box drop_preview'>
+                        <p style={{ fontSize: `${fontsize}` }} >Font-size</p>
+                    </div>
                 </div>
                 <div className="copy_code_wraper">
                     <span>Code</span>
                     <div className="code_box">
                         <pre>
-                            <span className='code_one'>filter</span>
+                            <span className='code_one'>font-size</span>
                             {': '}
-                            <span className='code_two'>blur</span>
-                            (
-                            <span className='code_three'>{blur}</span>
-                            )
+                            <span className='code_three'>{fontsize}</span>
                             ;
                         </pre>
                     </div>
-                    <button onClick={blurCopyHandler} className='copyBtn'>
+                    <button onClick={fontsizeCopyHandler} className='copyBtn'>
                         {copyClickText ? 'Copied!' : 'Copy'}
                     </button>
                 </div>
@@ -53,9 +51,9 @@ export default function Blur() {
                 <span>Option</span>
                 <div className="options">
                     <div className="input_box">
-                        <label>Radius</label>
-                        <input onChange={(e) => blurHandler(e)} type="range" />
-                        <span>{blur}</span>
+                        <label>Size</label>
+                        <input onChange={(e) => fontsizeHandler(e)} type="range" />
+                        <span>{fontsize}</span>
                     </div>
                 </div>
             </div>

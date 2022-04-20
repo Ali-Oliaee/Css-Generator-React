@@ -2,11 +2,12 @@ import React, { useContext, useState } from 'react'
 import { MainContext } from '../../components/Context/MainContextProvider'
 import './../generalStyle.css'
 import './Filter.css'
+import { motion } from 'framer-motion'
 import copyed from '../../func'
 
 export default function Contrast() {
   const [contrast, setContrast] = useState('100%')
-  const { copyClickText, btnCopyTextChange } = useContext(MainContext)
+  const { copyClickText, btnCopyTextChange, mainVariant } = useContext(MainContext)
 
   const contrastHandler = (e) => {
     setContrast(`${e.target.value}%`)
@@ -18,7 +19,12 @@ export default function Contrast() {
     btnCopyTextChange()
   }
   return (
-    <div className='style_Container'>
+    <motion.div
+      variants={mainVariant}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className='style_Container'>
       <span className='titr'>Contrast</span>
       <div className="top_box">
         <div className="preview_wraper">
@@ -53,6 +59,6 @@ export default function Contrast() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }

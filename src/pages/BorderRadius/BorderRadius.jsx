@@ -1,11 +1,12 @@
 import React, { useContext, useState } from 'react'
 import { MainContext } from '../../components/Context/MainContextProvider'
 import './../generalStyle.css'
+import { motion } from 'framer-motion'
 import copyed from '../../func'
 
 export default function BorderRadius() {
     const [borderRadius, setBorderRadius] = useState('50px')
-    const { copyClickText, btnCopyTextChange } = useContext(MainContext)
+    const { copyClickText, btnCopyTextChange, mainVariant } = useContext(MainContext)
 
     const borderRadiusHandler = (e) => {
         setBorderRadius(`${e.target.value}px`)
@@ -17,7 +18,12 @@ export default function BorderRadius() {
         btnCopyTextChange()
     }
     return (
-        <div className='style_Container'>
+        <motion.div
+            variants={mainVariant}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className='style_Container'>
             <span className='titr'>Border-Radius</span>
             <div className="top_box">
                 <div className="preview_wraper">
@@ -49,6 +55,6 @@ export default function BorderRadius() {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }

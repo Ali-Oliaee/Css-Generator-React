@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { MainContext } from '../../components/Context/MainContextProvider'
 import './../generalStyle.css'
+import { motion } from 'framer-motion'
 import copyed from '../../func'
 
 export default function DropShadow() {
@@ -8,7 +9,7 @@ export default function DropShadow() {
     const [dropShadowColor, setDropShadowColor] = useState('#000')
     const [dropShadowHorizontal, setDropShadowHorizontal] = useState('-10px')
     const [dropVertical, setDropVertical] = useState('-10px')
-    const { copyClickText, btnCopyTextChange } = useContext(MainContext)
+    const { copyClickText, btnCopyTextChange, mainVariant } = useContext(MainContext)
 
     const dropColorChange = (e) => {
         setDropShadowColor(e.target.value)
@@ -32,7 +33,12 @@ export default function DropShadow() {
         btnCopyTextChange()
     }
     return (
-        <div className='style_Container'>
+        <motion.div
+            variants={mainVariant}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className='style_Container'>
             <span className='titr'>Border</span>
             <div className="top_box">
                 <div className="preview_wraper">
@@ -89,6 +95,6 @@ export default function DropShadow() {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }

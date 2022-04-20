@@ -2,13 +2,14 @@ import React, { useContext, useState } from 'react'
 import { MainContext } from '../../components/Context/MainContextProvider'
 import './../generalStyle.css'
 import copyed from '../../func'
+import { motion } from 'framer-motion'
 
 
 export default function Border() {
     const [borderWidth, setBorderWidth] = useState('50px')
     const [borderColor, setBorderColor] = useState('#000')
     const [borderStyle, setBorderStyle] = useState('solid')
-    const { copyClickText, btnCopyTextChange } = useContext(MainContext)
+    const { copyClickText, btnCopyTextChange, mainVariant } = useContext(MainContext)
 
     const handleChange = (e) => {
         setBorderColor(e.target.value)
@@ -28,7 +29,12 @@ export default function Border() {
         btnCopyTextChange()
     }
     return (
-        <div className='style_Container'>
+        <motion.div
+            variants={mainVariant}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className='style_Container'>
             <span className='titr'>Border</span>
             <div className="top_box">
                 <div className="preview_wraper">
@@ -81,6 +87,6 @@ export default function Border() {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }

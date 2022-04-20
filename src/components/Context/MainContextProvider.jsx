@@ -12,6 +12,26 @@ export default function MainContextProvider({ children }) {
             setcopyClickText(false)
         }, 3000);
     }
+
+    const closeMenu = () => {
+        setMenuActive(false)
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    const mainVariant = {
+        hidden: {
+            y: "-5rem",
+            opacity: 0
+        },
+        visible: {
+            y: 0,
+            opacity: 1
+        },
+        exit: {
+            y: "5rem",
+            opacity: 0
+        }
+    }
     return (
         <MainContext.Provider
             value={{
@@ -19,7 +39,9 @@ export default function MainContextProvider({ children }) {
                 setMenuActive,
                 copyClickText,
                 setcopyClickText,
-                btnCopyTextChange
+                btnCopyTextChange,
+                mainVariant,
+                closeMenu
             }}
         >
             {children}

@@ -2,11 +2,12 @@ import React, { useContext, useState } from 'react'
 import { MainContext } from '../../components/Context/MainContextProvider'
 import './../generalStyle.css'
 import './Filter.css'
+import { motion } from 'framer-motion'
 import copyed from '../../func'
 
 export default function Grayscale() {
   const [grayscale, setGrayscale] = useState('50%')
-  const { copyClickText, btnCopyTextChange } = useContext(MainContext)
+  const { copyClickText, btnCopyTextChange, mainVariant } = useContext(MainContext)
 
   const grayscaleHandler = (e) => {
     setGrayscale(`${e.target.value}%`)
@@ -18,7 +19,12 @@ export default function Grayscale() {
     btnCopyTextChange()
   }
   return (
-    <div className='style_Container'>
+    <motion.div
+      variants={mainVariant}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className='style_Container'>
       <span className='titr'>Grayscale</span>
       <div className="top_box">
         <div className="preview_wraper">
@@ -53,6 +59,6 @@ export default function Grayscale() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
