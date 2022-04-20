@@ -59,7 +59,7 @@ Clone the project
 
 ```bash
 
-git clone 
+git clone https://github.com/mohammadyousefvand/Css-Generator.git
 
 ```
 
@@ -67,7 +67,7 @@ Go to the project directory
 
 ```bash
 
-cd 
+cd Css-Generator
 
 ```
 
