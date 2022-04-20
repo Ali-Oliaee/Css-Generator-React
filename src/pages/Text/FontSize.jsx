@@ -52,7 +52,7 @@ export default function FontSize() {
                 <div className="options">
                     <div className="input_box">
                         <label>Size</label>
-                        <input onChange={(e) => fontsizeHandler(e)} type="range" />
+                        <input onChange={(e) => fontsizeHandler(e)} type="range" max={70} />
                         <span>{fontsize}</span>
                     </div>
                 </div>

@@ -10,12 +10,12 @@ export default function MenuBar() {
     return (
         <div className={`menu ${menuActive && 'active'}`}>
             <Link onClick={closeMenu} to={'/'} className='btn_Menu'>Home</Link>
-            {Datas.map((data, index) => (
-                <div key={index} className="group_Menu">
+            {Datas.map((data) => (
+                <div key={data.id} className="group_Menu">
                     <span className="title_Menu">{data.title}</span>
                     <div className="Menu_btn">
-                        {data.routeAddress.map((routes, index) => (
-                            <Link key={index} onClick={closeMenu} to={routes.route} className='btn_Menu'>{routes.name}</Link>
+                        {data.routeAddress.map((routes) => (
+                            <Link key={routes.id} onClick={closeMenu} to={routes.route} className='btn_Menu'>{routes.name}</Link>
                         ))}
                     </div>
                 </div>

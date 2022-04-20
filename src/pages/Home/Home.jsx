@@ -21,12 +21,12 @@ export default function Home() {
             animate="visible"
             exit="exit"
             className='home_Container'>
-            {Datas.map((data, index) => (
-                <div key={index} className="group_container">
+            {Datas.map((data) => (
+                <div key={data.id} className="group_container">
                     <span className="title_group">{data.title}</span>
                     <div className="group_btn">
-                        {data.routeAddress.map((routes, index) => (
-                            <Link onClick={closeMenu} key={index} to={routes.route}>
+                        {data.routeAddress.map((routes) => (
+                            <Link onClick={closeMenu} key={routes.id} to={routes.route}>
                                 <AwesomeButton>{routes.name}</AwesomeButton>
                             </Link>
                         ))}

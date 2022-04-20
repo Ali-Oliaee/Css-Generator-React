@@ -24,7 +24,7 @@ export default function TextDecoration() {
     }
 
     const textDecorationCopyHandler = async () => {
-        let text = `text-decoration: ${textDecoration} ${textDecorationStyle};`
+        let text = `text-decoration: ${textDecoration} ${textDecorationStyle} ${textDecorationColor};`
         await copyed(text)
         btnCopyTextChange()
     }
