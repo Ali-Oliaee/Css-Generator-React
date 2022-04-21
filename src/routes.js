@@ -18,6 +18,7 @@ import Opasity from './pages/Box/Opasity';
 import FontSize from './pages/Text/FontSize';
 import Textcolor from './pages/Text/Textcolor';
 import TextDecoration from './pages/Text/TextDecoration';
+import Texttransform from './pages/Text/Texttransform';
 
 let router = [
     {path: '/', element: <Home />,},
@@ -39,6 +40,7 @@ let router = [
     {path: '/text/fontsize', element: <FontSize />,},
     {path: '/text/color', element: <Textcolor />,},
     {path: '/text/decoration', element: <TextDecoration />,},
+    {path: '/text/transform', element: <Texttransform />,},
     {path: '*', element: <Navigate to={'/'} />,},
   ]
 

@@ -49,7 +49,7 @@ export default function DropShadow() {
                 </div>
                 <div className="copy_code_wraper">
                     <span>Code</span>
-                    <div className="code_box ">
+                    <div className="code_box responsive_code">
                         <pre>
                             <span className='code_one'>filter</span>
                             {': '}
