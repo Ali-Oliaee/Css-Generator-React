@@ -31,6 +31,7 @@ Packages used in Project :
 - Text-decoration
 - Text-transform
 - Letter-spacing
+- Line-height
 - Other tools are ***coming  Soon*** 😉
 
 
