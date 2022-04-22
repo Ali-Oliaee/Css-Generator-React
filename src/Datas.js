@@ -116,44 +116,49 @@ let Datas = [
                 route: '/text/transform',
                 name: 'Text-transform'
             },
+            {
+                id: 24,
+                route: '/text/letterSpacing',
+                name: 'Letter-Spacing'
+            },
         ],
     },
     {
-        id: 24,
+        id: 25,
         title: "Transform (Comming Soon 😉)",
         routeAddress: [
             {
-                id: 25,
+                id: 26,
                 route: '/transform/translateX',
                 name: 'TranslateX'
             },
             {
-                id: 26,
+                id: 27,
                 route: '/transform/translateY',
                 name: 'TranslateY'
             },
             {
-                id: 27,
+                id: 28,
                 route: '/transform/scaleX',
                 name: 'ScaleX'
             },
             {
-                id: 28,
+                id: 29,
                 route: '/transform/scaleY',
                 name: 'ScaleY'
             },
             {
-                id: 29,
+                id: 30,
                 route: '/transform/skewX',
                 name: 'SkewX'
             },
             {
-                id: 30,
+                id: 31,
                 route: '/transform/skewY',
                 name: 'SkewY'
             },
             {
-                id: 31,
+                id: 32,
                 route: '/transform/rotate',
                 name: 'Rotate'
             },

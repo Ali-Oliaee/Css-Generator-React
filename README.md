@@ -29,6 +29,8 @@ Packages used in Project :
 - Color
 - Font-Size
 - Text-decoration
+- Text-transform
+- Letter-spacing
 - Other tools are ***coming  Soon*** 😉
 
 

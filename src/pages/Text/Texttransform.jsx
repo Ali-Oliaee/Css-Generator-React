@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import copyed from '../../func'
 
 export default function Texttransform() {
-  const [textTransform, settextTransform] = useState('line-through')
+  const [textTransform, settextTransform] = useState('none')
   const { copyClickText, btnCopyTextChange, mainVariant } = useContext(MainContext)
 
   const textTransformHandler = (e) => {
