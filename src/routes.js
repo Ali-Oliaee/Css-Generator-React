@@ -21,6 +21,7 @@ import TextDecoration from './pages/Text/TextDecoration';
 import Texttransform from './pages/Text/Texttransform';
 import LetterSpacing from './pages/Text/LetterSpacing';
 import Lineheight from './pages/Text/Lineheight';
+import Textalign from './pages/Text/Textalign';
 
 let router = [
     {path: '/', element: <Home />,},
@@ -45,6 +46,7 @@ let router = [
     {path: '/text/transform', element: <Texttransform />,},
     {path: '/text/letterSpacing', element: <LetterSpacing />,},
     {path: '/text/lineheight', element: <Lineheight />,},
+    {path: '/text/textalign', element: <Textalign />,},
     {path: '*', element: <Navigate to={'/'} />,},
   ]
 

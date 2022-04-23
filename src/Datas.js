@@ -126,44 +126,49 @@ let Datas = [
                 route: '/text/lineheight',
                 name: 'Line-height'
             },
+            {
+                id: 26,
+                route: '/text/textalign',
+                name: 'Text-align'
+            },
         ],
     },
     {
-        id: 26,
+        id: 27,
         title: "Transform (Comming Soon 😉)",
         routeAddress: [
             {
-                id: 27,
+                id: 28,
                 route: '/transform/translateX',
                 name: 'TranslateX'
             },
             {
-                id: 28,
+                id: 29,
                 route: '/transform/translateY',
                 name: 'TranslateY'
             },
             {
-                id: 29,
+                id: 30,
                 route: '/transform/scaleX',
                 name: 'ScaleX'
             },
             {
-                id: 30,
+                id: 31,
                 route: '/transform/scaleY',
                 name: 'ScaleY'
             },
             {
-                id: 31,
+                id: 32,
                 route: '/transform/skewX',
                 name: 'SkewX'
             },
             {
-                id: 32,
+                id: 33,
                 route: '/transform/skewY',
                 name: 'SkewY'
             },
             {
-                id: 33,
+                id: 34,
                 route: '/transform/rotate',
                 name: 'Rotate'
             },

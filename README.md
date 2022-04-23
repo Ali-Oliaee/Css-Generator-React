@@ -32,6 +32,7 @@ Packages used in Project :
 - Text-transform
 - Letter-spacing
 - Line-height
+- Text-align
 - Other tools are ***coming  Soon*** 😉
 
 
