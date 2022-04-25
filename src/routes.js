@@ -22,6 +22,7 @@ import Texttransform from './pages/Text/Texttransform';
 import LetterSpacing from './pages/Text/LetterSpacing';
 import Lineheight from './pages/Text/Lineheight';
 import Textalign from './pages/Text/Textalign';
+import FontWeight from './pages/Text/FontWeight';
 
 let router = [
     {path: '/', element: <Home />,},
@@ -47,6 +48,7 @@ let router = [
     {path: '/text/letterSpacing', element: <LetterSpacing />,},
     {path: '/text/lineheight', element: <Lineheight />,},
     {path: '/text/textalign', element: <Textalign />,},
+    {path: '/text/fontweight', element: <FontWeight />,},
     {path: '*', element: <Navigate to={'/'} />,},
   ]
 

@@ -33,6 +33,7 @@ Packages used in Project :
 - Letter-spacing
 - Line-height
 - Text-align
+- Font-weight
 - Other tools are ***coming  Soon*** 😉
 
 
