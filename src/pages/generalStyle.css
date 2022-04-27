@@ -180,7 +180,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 .box_Shadow_example {
     width: 150px;
     height: 150px;
-    background-color: #addb67;
+    background: linear-gradient(222deg, rgba(244,67,54,1) 0%, rgba(162,12,1,1) 100%);
 }
 
 .color_Grid{
