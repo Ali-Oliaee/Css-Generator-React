@@ -24,6 +24,7 @@ import Lineheight from './pages/Text/Lineheight';
 import Textalign from './pages/Text/Textalign';
 import FontWeight from './pages/Text/FontWeight';
 import ScaleX from './pages/Transform/ScaleX';
+import ScaleY from './pages/Transform/ScaleY';
 
 let router = [
     {path: '/', element: <Home />,},
@@ -51,6 +52,7 @@ let router = [
     {path: '/text/textalign', element: <Textalign />,},
     {path: '/text/fontweight', element: <FontWeight />,},
     {path: '/transform/scaleX', element: <ScaleX />,},
+    {path: '/transform/scaleY', element: <ScaleY />,},
     {path: '*', element: <Navigate to={'/'} />,},
   ]
 
