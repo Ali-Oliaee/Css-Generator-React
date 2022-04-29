@@ -25,6 +25,7 @@ import Textalign from './pages/Text/Textalign';
 import FontWeight from './pages/Text/FontWeight';
 import ScaleX from './pages/Transform/ScaleX';
 import ScaleY from './pages/Transform/ScaleY';
+import TranslateX from './pages/Transform/TranslateX';
 
 let router = [
     {path: '/', element: <Home />,},
@@ -53,6 +54,7 @@ let router = [
     {path: '/text/fontweight', element: <FontWeight />,},
     {path: '/transform/scaleX', element: <ScaleX />,},
     {path: '/transform/scaleY', element: <ScaleY />,},
+    {path: '/transform/translateX', element: <TranslateX />,},
     {path: '*', element: <Navigate to={'/'} />,},
   ]
 
