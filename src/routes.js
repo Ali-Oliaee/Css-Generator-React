@@ -27,6 +27,7 @@ import ScaleX from './pages/Transform/ScaleX';
 import ScaleY from './pages/Transform/ScaleY';
 import TranslateX from './pages/Transform/TranslateX';
 import TranslateY from './pages/Transform/TranslateY';
+import Rotate from './pages/Transform/Rotate';
 
 let router = [
     {path: '/', element: <Home />,},
@@ -57,6 +58,7 @@ let router = [
     {path: '/transform/scaleY', element: <ScaleY />,},
     {path: '/transform/translateX', element: <TranslateX />,},
     {path: '/transform/translateY', element: <TranslateY />,},
+    {path: '/transform/rotate', element: <Rotate />,},
     {path: '*', element: <Navigate to={'/'} />,},
   ]
 
