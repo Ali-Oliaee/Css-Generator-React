@@ -37,7 +37,7 @@ Packages used in Project :
 - Other tools are ***coming  Soon*** 😉
 
 
-**Transform tools** (Coming Soon 😉) :
+**Transform tools**
 - TranslateX
 - TranslateY
 - ScaleX
